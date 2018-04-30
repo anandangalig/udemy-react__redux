@@ -1,5 +1,6 @@
 import React from 'react'; // this part is used to create ES5 from JSX/ES6: the components
 import ReactDOM from 'react-dom'; // this part handles the rendering to DOM part!
+const YT_API_KEY = 'AIzaSyBFpVS_fU1dXwUZTxoi6yLS6i4X-lanTKA';
 
 // ================= Step 1: create component that creates some html
 
@@ -28,4 +29,4 @@ ReactDOM.render(<App />, document.querySelector(".container"));
 // 1. Component division can be done in any way. There is no secret sauce.
 // 2. Componenents can be nested!
 // 3. The modularity of components based ont he functionality, is useful for re-using the same component.
-// 4. 1 compnenet per FILE! No matter how small. 
+// 4. 1 compnenet per FILE! No matter how small.
