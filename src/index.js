@@ -1,5 +1,7 @@
 import React from 'react'; // this part is used to create ES5 from JSX/ES6: the components
 import ReactDOM from 'react-dom'; // this part handles the rendering to DOM part!
+
+import SearchBar from './components/search_bar'; // hand-made JS file need the realtive path reference. Libraries are namespaced, thus no need for a path.
 const YT_API_KEY = 'AIzaSyBFpVS_fU1dXwUZTxoi6yLS6i4X-lanTKA';
 
 // ================= Step 1: create component that creates some html
@@ -14,7 +16,11 @@ const YT_API_KEY = 'AIzaSyBFpVS_fU1dXwUZTxoi6yLS6i4X-lanTKA';
 const App = () => {
   // this component is the class we are definging here. Before passing it to the DOM, it needs to be instantiated as an element.
   // () => is ES6 for function(). It has diff this variables, and allows for cleaner components with multiple functions.
-  return <div>hello!</div>;
+  return (
+    <div>
+      <SearchBar />
+    </div>
+  );
 }
 
 
