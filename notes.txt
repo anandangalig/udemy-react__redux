@@ -1,0 +1,21 @@
+JSX - a subset of JS that lets us write html within JS
+JSX is a preprocessor step that adds XML syntax to JavaScript.
+You can definitely use React without JSX but JSX makes React a lot more elegant.
+Just like XML, JSX tags have a tag name, attributes, and children.
+If an attribute value is enclosed in quotes, the value is a string.
+
+
+ 1. Component division can be done in any way. There is no secret sauce.
+ 2. Components can be nested!
+ 3. The modularity of components based on the functionality, is useful for re-using the same component.
+ 4. One component per FILE! No matter how small.
+
+React VS Angular or Backbone: much less methods and structure to learn and use.
+
+
+Working with Data/API:
+* Follow the Data Down structure: the outer most component (parent) should call the data and pass it down.
+
+function() is equal to =>
+  -> aka ARROW functions
+  -> fat arrow 
