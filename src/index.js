@@ -2,6 +2,7 @@ import React, {Component} from 'react'; // this part is used to create ES5 from 
 import ReactDOM from 'react-dom'; // this part handles the rendering to DOM part!
 import YTsearch from 'youtube-api-search';
 import SearchBar from './components/search_bar'; // hand-made JS file need the realtive path reference. Libraries are namespaced, thus no need for a path.
+import VideoList from './components/video_list';
 const YT_API_KEY = 'AIzaSyBFpVS_fU1dXwUZTxoi6yLS6i4X-lanTKA';
 
 // ================= Step 1: create component that creates some html
@@ -19,6 +20,7 @@ class App extends Component{
     return (
       <div>
       <SearchBar />
+      <VideoList videos={this.state.videos}/>
       </div>
     );
   }
