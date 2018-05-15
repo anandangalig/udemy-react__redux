@@ -28,8 +28,12 @@ function() is equal to =>
 Props - properties
 
 * passed data from parent to child component
-* everytime the parent is refreshed/state changes, the recei ving child will get a new copy
+* everytime the parent is refreshed/state changes, the receiving child will get a new copy
 * in Class based components, it will be available as this.props
 * in Functional components, it will the available in the argument passed-in (e.g. props.videos)
 
-key={vid.etag} --> had to be passed in when working with listed items. The reason is react is smart that to update only the necessary item if/when changed/updated. Otherwise, it will have to re-render everything since it has no idea which one to update. Similar to UUID. It could be any unique ID. 
+key={vid.etag} --> had to be passed in when working with listed items. The reason is react is smart that to update only the necessary item if/when changed/updated. Otherwise, it will have to re-render everything since it has no idea which one to update. Similar to UUID. It could be any unique ID.
+
+className="" --> in JSX transpiles into class=""
+
+{video} is ES6 for const = props.video;  --> always use { } when working with JS var in ES6
