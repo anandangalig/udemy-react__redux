@@ -23,7 +23,7 @@ function() is equal to =>
 
 -------------------------------------------------------------------------------
 
-5/13/18
+5/13/18 Session 2
 
 Props - properties
 
@@ -34,6 +34,18 @@ Props - properties
 
 key={vid.etag} --> had to be passed in when working with listed items. The reason is react is smart that to update only the necessary item if/when changed/updated. Otherwise, it will have to re-render everything since it has no idea which one to update. Similar to UUID. It could be any unique ID.
 
+
+5/15/18
 className="" --> in JSX transpiles into class=""
 
 {video} is ES6 for const = props.video;  --> always use { } when working with JS var in ES6
+
+
+5/16/18
+Ask yourself before writing a component: "Do I need to maintain/work with any states for this component?"
+
+NO - just use a simple Functional component
+
+YES - use Class based component, for it has states
+
+# for video_detail.js we do not need states. It will only read/display the data from props.
