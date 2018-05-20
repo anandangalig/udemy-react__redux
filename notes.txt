@@ -49,3 +49,9 @@ NO - just use a simple Functional component
 YES - use Class based component, for it has states
 
 # for video_detail.js we do not need states. It will only read/display the data from props.
+
+
+-------------------------------------------------------------------------------
+Session2 cont.
+
+**** When the State changes, the component re-runs the render(), which refreshed all the child compnenents too. 

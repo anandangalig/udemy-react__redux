@@ -12,11 +12,19 @@ const YT_API_KEY = 'AIzaSyBFpVS_fU1dXwUZTxoi6yLS6i4X-lanTKA';
 class App extends Component{
   // the constructor runs first and goes and fetches videos:
   constructor(props){
-    super(props);
-    this.state = { videos: []};
+    super(props); // look this up! Accessing the parent methods and properties
+    this.state = {
+      videos: [],
+      selectedvideo: null
+    };
+
     // ES6 version:
     YTsearch({key: YT_API_KEY, term: 'boxing'}, (videos) => {
-      this.setState({videos}); //works if the key/value are the same. Transpiles into this.setState({videos: videos});
+      // this.setState({videos}); //works if the key/value are the same. Transpiles into this.setState({videos: videos});
+      this.setState({
+        videos: videos,
+        selectedvideo: videos[0]
+      });
     });
   }
 
@@ -26,8 +34,11 @@ class App extends Component{
     return (
       <div>
       <SearchBar />
-      <VideoDetail video={this.state.videos[0]} />
-      <VideoList videos={this.state.videos} />
+      <VideoDetail video={this.state.selectedvideo} />
+      <VideoList
+        onVideoSelect = {selectedvideo => this.setState({selectedvideo})}
+        videos={this.state.videos}
+      />
       </div>
     );
   }
